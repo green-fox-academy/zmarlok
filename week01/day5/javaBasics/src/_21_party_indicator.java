@@ -42,4 +42,4 @@ public class _21_party_indicator {
                 System.out.println("Sausage party...");
             }
         }
-    }
+}
