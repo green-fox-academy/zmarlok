@@ -7,5 +7,6 @@ public class _08_Sum_elements {
         int [] r = {54, 23, 66, 12};
 
         System.out.println("The sum of the 2. and 3. elements of r array is: " + (r[1] + r[2]));
+
     }
 }
