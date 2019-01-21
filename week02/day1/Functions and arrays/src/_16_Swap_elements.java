@@ -8,8 +8,13 @@ public class _16_Swap_elements {
 
         String[] abc = {"first", "second", "third"};
 
-        abc[0] = abc [2];
+        String temp = "third";
+        abc[2] = abc[0];
+        abc[0] = temp;
 
+        for (int i = 0; i < abc.length; i++) {
+            System.out.print(abc[i] + " ");
 
+        }
     }
 }
