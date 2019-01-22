@@ -14,6 +14,8 @@ public class TodoPrint {
 
         todoText = todoText + "\n     - Diablo";
 
+        System.out.println(todoText);
+
         // Expected outpt:
 
         // My todo:
@@ -21,6 +23,5 @@ public class TodoPrint {
         //  - Download games
         //      - Diablo
 
-        System.out.println(todoText);
     }
 }

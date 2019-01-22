@@ -6,6 +6,7 @@ public class Matchmaking {
         ArrayList<String> girls = new ArrayList<String>(Arrays.asList("Eve", "Ashley", "Claire", "Kat", "Jane"));
         ArrayList<String> boys = new ArrayList<String>(Arrays.asList("Joe", "Fred", "Tom", "Todd", "Neef", "Jeff"));
 
+
         // ArrayList<String> makingMatches = new ArrayList<>();
 
         String[] girlsArray = girls.toArray(new String[girls.size() + 1]);
@@ -13,11 +14,11 @@ public class Matchmaking {
 
         for (int i = 0; i < girlsArray.length; i++) {
 
-            if (girlsArray[i] == null){
+             if (girlsArray[i] == null){
                 girlsArray[i] = "";
             } else
                 girlsArray[i] = girlsArray[i];
-            System.out.println(i + " " + girlsArray[i] + ", "+ boysArray[i]);
+            System.out.print(girlsArray[i] + ", "+ boysArray[i] + ", ");
 
 
             // Write a method that joins the two lists by matching one girl with one boy into a new list

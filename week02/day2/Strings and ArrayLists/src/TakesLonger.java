@@ -16,25 +16,5 @@ public class TakesLonger {
         String missingPart = " always takes longer than ";
         String newQuote = (quotePart1 + missingPart + quotePart2);
         System.out.println(newQuote);
-
-        /* .split()
-        String student13 = "Klotild";
-
-        String[] studentSplit = student13.split("t");
-        System.out.println(studentSplit[0]);
-        System.out.println(studentSplit[1]); */
-
-        // USE SUBSTRING!!!
-
-
-
-        /* //.substring()
-        String student2 = "Akos";
-        System.out.println(student2.substring(1));
-        student2 = student2.substring(1);
-        System.out.println(student2);
-        System.out.println(student2.substring(1,2)); */
-
-
     }
 }
