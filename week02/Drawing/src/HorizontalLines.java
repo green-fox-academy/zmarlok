@@ -17,11 +17,17 @@ public class HorizontalLines {
         // drawLine(100,100, graphics);
 
 
-            drawLine(10,100, graphics);
-        for (int i = 0; i <3 ; i++) {
-            drawLine(x,y, graphics);
+           // drawLine(100, 100, graphics);
+
+        for (int i = 50; i <171; i+= 60) {
+            drawLine(i, 100, graphics);
 
         }
+
+
+
+
+
 
     }
 
