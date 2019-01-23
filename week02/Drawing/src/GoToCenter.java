@@ -4,20 +4,35 @@ import java.awt.*;
 
 import static javax.swing.JFrame.EXIT_ON_CLOSE;
 
-public class LineInTheMiddle {
-        public static void mainDraw(Graphics graphics){
+public class GoToCenter {
+    public static void mainDraw(Graphics graphics) {
 
 
-            // draw a red horizontal line to the canvas' middle.
-        graphics.setColor(Color.RED);
-        graphics.drawLine(0, 160, 320, 160);
-            // draw a green vertical line to the canvas' middle.
-        graphics.setColor(Color.GREEN);
-        graphics.drawLine(160, 0, 160, 320);
+        // Create a line drawing function that takes 3 parameters:
 
+
+
+        // The x and y coordinates of the line's starting point and the graphics
+
+        // and draws a line from that point to the center of the canvas.
+        // CENTER: x: 160, y: 160
+
+        // Draw 3 lines with that function. Use loop for that.
+
+        drawLine(0, 0, graphics);
+        // int x = 0;
+        // int y = 0;
+
+        for (int i = 0; i <201 ; i+= 100) {
+            drawLine(i, 0, graphics);
+        }
 
     }
+    public static void drawLine(int x, int y, Graphics graphics){
 
+        graphics.drawLine(x,y,160,160);
+
+    }
     // Don't touch the code below
     static int WIDTH = 320;
     static int HEIGHT = 320;
