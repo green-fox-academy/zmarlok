@@ -19,17 +19,25 @@ public class PostIt {
     public PostIt() {
         numberOfPostIts++;
     }
-    /*public PostIt(String backgroundColor, String text, String textColor) {
+
+    public PostIt(String backgroundColor, String text, String textColor){
+        this();
+
         this.backgroundColor = backgroundColor;
         this.text = text;
         this.textColor = textColor;
-    } */
+    }
 
     public void showPostIt(){
         System.out.println("The background color of the post it is: " + backgroundColor);
         System.out.println("It shows the following text: " + text);
         System.out.println("And the color of the text is: " + textColor + "\n");
 
-
     }
 }
+
+    /*public PostIt(String backgroundColor, String text, String textColor) {
+        this.backgroundColor = backgroundColor;
+        this.text = text;
+        this.textColor = textColor;
+    } */

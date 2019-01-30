@@ -8,7 +8,7 @@
 //a yellow with green text: "Superb!"
 package postit;
 
-public class Class {
+public class Main {
 
     public static void main(String[] args){
 
@@ -18,17 +18,14 @@ public class Class {
         firstPostIt.backgroundColor = "orange";
         firstPostIt.showPostIt();
 
-        PostIt secondPostIt = new PostIt();
-        secondPostIt.textColor = "black";
-        secondPostIt.text = "Awesome";
-        secondPostIt.backgroundColor = "Superb!";
+        PostIt secondPostIt = new PostIt("black", "Awesome", "pink");
         secondPostIt.showPostIt();
 
-        PostIt thirdPostIt = new PostIt();
-        thirdPostIt.textColor = "green";
-        thirdPostIt.text = "Superb!";
-        thirdPostIt.backgroundColor = "yellow";
+        PostIt thirdPostIt = new PostIt("green", "Superb!", "yellow");
         thirdPostIt.showPostIt();
+
+        PostIt fourthPostIt = new PostIt("white", "content", "black");
+        fourthPostIt.showPostIt();
 
         System.out.println("I have now " + PostIt.numberOfPostIts + " post its.");
 
