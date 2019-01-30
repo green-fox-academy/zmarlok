@@ -16,7 +16,6 @@ public class Main {
 
         sharpie1.use(3);
 
-
         sharpie1.remainingInkAmount();
     }
 }

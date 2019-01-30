@@ -17,14 +17,16 @@ public class Sharpie {
 
     public Sharpie(String color, float width){
         this.inkAmount = inkAmount;
+        this.color = color;
+        this.width = width;
     }
 
 
     public void use(int linesToBeHighlighted){
-            for (int i = 0; i < linesToBeHighlighted ; i++) {
-            inkAmount--;
+            //for (int i = 0; i <  ; i++) {
+            inkAmount = inkAmount - (linesToBeHighlighted*width);
         }
-    }
+
 
     public void remainingInkAmount(){
         System.out.println("The remaining ink amount is: " + inkAmount);
