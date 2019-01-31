@@ -4,27 +4,28 @@ import java.awt.*;
 
 import static javax.swing.JFrame.EXIT_ON_CLOSE;
 
-public class Checkerboard {
+public class PurpleSteps3d {
     public static void mainDraw(Graphics graphics) {
-        // Fill the canvas with a checkerboard pattern.
-        // The size of the canvas is 320x320 px.
-        // One field should be 40x40 px.
+        // Reproduce this:
+        // [https://github.com/green-fox-academy/teaching-materials/blob/master/workshop/drawing/purple-steps-3d/r4.png]
+        // 6 pc purple squares which are growing from 10x10px
 
-        int indexOfRows = 8;
-        int fieldSize = 40;
-        int canvasSize = WIDTH;
-
-        for (int rows = 0; rows < canvasSize / fieldSize; rows++) {
-            for (int columns = 0; columns < canvasSize / fieldSize; columns++) {
-                if (rows %2 !=0 ^ columns %2 !=0){
-                    graphics.setColor(Color.BLACK);
-                }else{
-                    graphics.setColor(Color.WHITE);
-                } graphics.fillRect(columns * canvasSize/indexOfRows, rows * canvasSize/indexOfRows, canvasSize/indexOfRows, canvasSize /indexOfRows);
-
-            }
+        int size = 10;
+        int start = 5;
+        for (int i = 0; i < 6; i++) {
+            drawSquare(start,size, graphics);
+            start = start + size;
+            size = size+10;
         }
     }
+
+
+    public static void drawSquare(int x, int a, Graphics graphics){
+        graphics.setColor(new Color(255,0,255));
+        graphics.drawRect(x,x,a,a);
+    }
+
+
     // Don't touch the code below
     static int WIDTH = 320;
     static int HEIGHT = 320;

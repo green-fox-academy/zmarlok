@@ -24,7 +24,7 @@ public class Diagonals {
         if (y1 == 0){
             graphics.setColor(Color.GREEN);
         } else {
-            graphics.setColor(Color.GREEN);
+            graphics.setColor(Color.RED);
         }
 
     }

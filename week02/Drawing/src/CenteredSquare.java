@@ -9,7 +9,7 @@ public class CenteredSquare {
     public static void mainDraw(Graphics graphics) {
         // Draw a green 10x10 square to the canvas' center.
 
-        drawRectCenter(10, graphics);
+        drawRectCenter(100, graphics);
     }
 
     public static void drawRectCenter(int a, Graphics graphics){

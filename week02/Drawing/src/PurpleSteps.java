@@ -11,7 +11,7 @@ public class PurpleSteps {
         // 19 pc 10x10 filled, purple squares
 
         for (int i = 0; i <19 ; i++) {
-            drawSquare(i*10,i*10, graphics);
+            drawSquare((i*10)+10,(i*10)+10, graphics); // 10px move on both coordinates (x, y) in every cycle, repeated 19 times
         }
 
 
