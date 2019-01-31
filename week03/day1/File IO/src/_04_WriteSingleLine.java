@@ -23,7 +23,6 @@ public class _04_WriteSingleLine {
             System.out.println("Unable to write file: my-file.txt");
         }
 
-
-
     }
 }
+
