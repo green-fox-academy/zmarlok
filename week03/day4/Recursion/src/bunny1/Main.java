@@ -6,17 +6,17 @@ package bunny1;
 public class Main {
 
     public static void main(String[] args) {
-        int bunnies = 10;
-        int ears = 2;
-        int earsOfBunnies = bunnies*ears;
-        bunnyEarsCounter(earsOfBunnies);
+        bunnyEarsCounter(2);
+
     }
 
-    public static void bunnyEarsCounter(int n){
-        if(n > 0){
-            bunnyEarsCounter(n-2);
-            System.out.println(n);
+    public static int bunnyEarsCounter(int numberOfBunnies){
 
-        } return;
+        if(0 < numberOfBunnies){
+            bunnyEarsCounter(numberOfBunnies-1);
+            System.out.println(numberOfBunnies+numberOfBunnies);
+            return numberOfBunnies;
+
+        } return 0;
     }
 }
