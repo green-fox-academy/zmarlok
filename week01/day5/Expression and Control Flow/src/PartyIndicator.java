@@ -1,7 +1,3 @@
-import java.util.Scanner;
-
-public class _21_party_indicator {
-    public static void main(String[] args) {
 // Write a program that asks for two numbers
 // The first number represents the number of girls that comes to a party, the
 // second the boys
@@ -16,6 +12,11 @@ public class _21_party_indicator {
 //
 // It should print: Sausage party
 // If no girls are coming, regardless the count of the people
+
+import java.util.Scanner;
+
+public class PartyIndicator {
+    public static void main(String[] args) {
 
         System.out.println("How many girls are coming to the party? ");
         Scanner scanner = new Scanner(System.in);

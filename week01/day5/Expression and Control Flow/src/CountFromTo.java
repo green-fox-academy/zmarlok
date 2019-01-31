@@ -13,7 +13,7 @@
 // 5
 import java.util.Scanner;
 
-public class _26_count_from_to {
+public class CountFromTo {
     public static void main(String[] args) {
 
         System.out.println("Please enter your first number: ");
@@ -25,10 +25,16 @@ public class _26_count_from_to {
         int b = Integer.parseInt(scanner2.nextLine());
 
 
-        while(a < b){
+        /*  Solution with while
+            while(a < b){
             int counter = a;
             System.out.println(counter);
             a+= 1;
+        } */
+
+        for (int i = a; i < b; i++) {
+            System.out.println(i);
+
         }
     }
 }

@@ -1,17 +1,16 @@
 // Write a program that asks for two numbers and prints the bigger one
 
 import java.util.Scanner;
-
-public class _20_print_bigger {
+public class PrintBigger {
 
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Enter your first number: ");
+        System.out.println("Enter your 1st number to compare: ");
         int userInput1 = scanner.nextInt();
 
-        System.out.println("Enter your second number: ");
+        System.out.println("Enter your 2nd number to compare: ");
         int userInput2 = scanner.nextInt();
 
         if (userInput1 > userInput2) {

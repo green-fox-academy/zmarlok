@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class _19_one_two_a_lot {
+public class OneTwoALot {
     public static void main(String[] args) {
 
         // Write a program that reads a number form the standard input,

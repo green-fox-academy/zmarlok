@@ -15,7 +15,7 @@
 // 10 * 15 = 150
 import java.util.Scanner;
 
-public class _25_multiplication_table {
+public class MultiplicationTable {
     public static void main(String[] args) {
 
         System.out.println("Please, enter a number: ");

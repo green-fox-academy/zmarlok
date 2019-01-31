@@ -1,10 +1,11 @@
+
 // Write a program that asks for 5 integers in a row,
 // then it should print the sum and the average of these numbers like:
 //
 // Sum: 22, Average: 4.4
 import java.util.Scanner;
 
-public class _17_average_of_input {
+public class AverageOfInput {
 
     public static void main(String[] args) {
 
@@ -25,9 +26,10 @@ public class _17_average_of_input {
         System.out.println("Enter your fifth number: ");
         int userInput5 = scanner.nextInt();
 
-       float avg = (userInput1 + userInput2 + userInput3 + userInput4 + userInput5) / 5;
-       int sum = (userInput1 + userInput2 + userInput3 + userInput4 + userInput5);
+        float avg = (userInput1 + userInput2 + userInput3 + userInput4 + userInput5) / 5;
+        int sum = (userInput1 + userInput2 + userInput3 + userInput4 + userInput5);
 
         System.out.println("Sum: " + sum + " Average: " + avg);
-    }
+        }
 }
+

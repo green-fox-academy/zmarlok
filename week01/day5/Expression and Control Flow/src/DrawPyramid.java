@@ -7,15 +7,15 @@
 // ****
 //
 // The triangle should have as many lines as the number was
+
 import java.util.Scanner;
 
-public class _28_triangle {
+public class DrawPyramid {
     public static void main(String[] args) {
 
-        System.out.println("How many lines of asterisks shall I draw?");
         Scanner scanner = new Scanner(System.in);
+        System.out.println("How many lines high will be the triangle?");
         int lines = scanner.nextInt();
-
 
         for (int i = 1; i <= lines; i++)
         {

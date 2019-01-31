@@ -10,7 +10,7 @@
 
 import java.util.Scanner;
 
-public class _28_draw_triangle {
+public class DrawTriangle {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
@@ -27,3 +27,4 @@ public class _28_draw_triangle {
         }
     }
 }
+
