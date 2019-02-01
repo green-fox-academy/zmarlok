@@ -15,15 +15,13 @@ public class DrawTriangle {
 
         Scanner scanner = new Scanner(System.in);
         System.out.println("How many lines high will be the triangle?");
-        int lines = scanner.nextInt();
+        int linesOfTriangle = scanner.nextInt();
 
-        for (int i = 1; i <= lines; i++)
-        {
-            for (int j = 1; j <= i; j++)
-            {
+        for (int linesToBeCreated = 1; linesToBeCreated <= linesOfTriangle; linesToBeCreated++) {
+            for (int rowsToBeCreated = 1; rowsToBeCreated <= linesToBeCreated; rowsToBeCreated++) {
                 System.out.print("*");
             }
-            System.out.println("");
+            System.out.print("\n");
         }
     }
 }
