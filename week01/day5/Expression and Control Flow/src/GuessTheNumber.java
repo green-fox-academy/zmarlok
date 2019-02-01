@@ -25,6 +25,6 @@ public class GuessTheNumber {
                   userNumber = scanner.nextInt();
               }
         }
-        System.out.println("You found the number: " + myNumber);
+        System.out.println("You are AWESOME! You found the number: " + myNumber);
     }
 }
