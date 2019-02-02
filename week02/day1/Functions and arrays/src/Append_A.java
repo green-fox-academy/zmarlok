@@ -12,11 +12,11 @@ public class _03_Append_A {
     static String typo = "Chinchill";
 
     public static void main(String[] args) {
-        appendAFunc();
+        appendAFunc("a");
     }
 
-    public static void appendAFunc(){
-        System.out.println(typo + "a");
+    public static void appendAFunc(String a){
+        System.out.println(typo + a);
 
     }
 }

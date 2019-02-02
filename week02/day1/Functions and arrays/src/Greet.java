@@ -11,10 +11,10 @@ public class _02_Greet {
     static String a1 = "Greenfox";
 
     public static void main(String[] args) {
-            greet();
+            greet(a1);
     }
 
-    public static void greet() {
+    public static void greet(String a1) {
         System.out.println("Greetings dear, " + a1);
 
     }
