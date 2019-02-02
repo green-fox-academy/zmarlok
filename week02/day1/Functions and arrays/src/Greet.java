@@ -6,7 +6,7 @@
 //     - Greeting is printing e.g. `Greetings dear, Greenfox`
 // - Greet `al`
 
-public class _02_Greet {
+public class Greet {
 
     static String a1 = "Greenfox";
 

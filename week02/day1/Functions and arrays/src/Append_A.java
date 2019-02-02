@@ -7,7 +7,7 @@
 //
 // - Print the result of `appendAFunc(typo)`
 
-public class _03_Append_A {
+public class Append_A {
 
     static String typo = "Chinchill";
 

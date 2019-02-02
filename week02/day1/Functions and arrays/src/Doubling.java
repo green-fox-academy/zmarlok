@@ -2,7 +2,7 @@
 // - Create a function called `doubling` that doubles it's input parameter and returns with an integer
 // - Print the result of `doubling(baseNum)`
 
-public class _01_Doubling {
+public class Doubling {
 
     static int baseNum = 123;
 
