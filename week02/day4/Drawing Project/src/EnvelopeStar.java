@@ -7,6 +7,10 @@ public class EnvelopeStar {
         // Draw lines as shown on picture: https://github.com/green-fox-academy/teaching-materials/blob/master/project/drawing/r1.png
         // 15 horizontal, 15 vertical, curved lines from the bottom left and from upper right corner
 
+
+        g.setColor(Color.black);
+        g.fillRect(0,0,WIDTH,HEIGHT);
+
         int canvasSize = WIDTH;
         int halfOfCanvas = canvasSize /2;
         int step = 10;

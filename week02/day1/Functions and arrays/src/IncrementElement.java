@@ -3,7 +3,7 @@
 - Increment the third element
 - Print the third element */
 
-public class _10_Increment_element {
+public class IncrementElement {
     public static void main(String[] args) {
         int[] t = {1, 2, 3, 4, 5};
 

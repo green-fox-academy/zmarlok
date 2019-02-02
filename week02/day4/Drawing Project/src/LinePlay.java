@@ -7,7 +7,10 @@ public class LinePlay {
             // Draw lines as shown on picture: https://github.com/green-fox-academy/teaching-materials/blob/master/project/drawing/r1.png
             // 15 horizontal, 15 vertical, curved lines from the bottom left and from upper right corner
 
-            int canvasSize = 320;
+            int canvasSize = 640;
+            graphics.setColor(Color.black);
+            graphics.fillRect(0,0,640,640);
+
             int step = 15;
             int cycle = canvasSize / step;
 
@@ -21,8 +24,8 @@ public class LinePlay {
         }
 
         // Don't touch the code below
-        static int WIDTH = 320;
-        static int HEIGHT = 320;
+        static int WIDTH = 640;
+        static int HEIGHT = 640;
 
         public static void main(String[] args) {
             JFrame jFrame = new JFrame("Drawing");
