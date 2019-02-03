@@ -2,15 +2,16 @@
 //   with the following content: `["koal", "pand", "zebr"]`
 // - Add all elements an `"a"` at the end
 
-public class _15_Append_A_array {
+import java.util.Arrays;
+
+public class AppendAToArray {
 
     public static void main(String[] args) {
         String[] animals= {"koal", "pand", "zebr"};
 
         for (int i = 0; i <animals.length ; i++) {
-            System.out.println(animals[i] + "a");
-
+            animals[i] += "a";
+            System.out.println(animals[i]);
         }
-
     }
 }
