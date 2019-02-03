@@ -24,8 +24,8 @@ public class Counter {
     public Counter(int startingValue){
         this.defaultValue = startingValue;
         currentValue = startingValue;
-
     }
+
     public void add(){
         currentValue++;
     }
