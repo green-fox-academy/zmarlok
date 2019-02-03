@@ -22,7 +22,7 @@ public class QuoteSwap{
 
         list.set(placeOfCannot, "do");
         list.set(placeOfDo, "cannot");
-        
+
         return list.toString();
 
 
