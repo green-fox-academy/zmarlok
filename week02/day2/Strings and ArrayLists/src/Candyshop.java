@@ -15,33 +15,24 @@ public class Candyshop{
         // No, don't just remove the lines
         // Create a method called sweets() which takes the list as a parameter.
 
+        // Expected output: "Cupcake", "Croissant", "Brownie", "Ice cream"
+        System.out.println(sweets(arrayList));
 
-      /*  arrayList.set(1, "Croissant");
-        arrayList.set(3, "Ice cream");
+    }
 
-        System.out.println(arrayList); */
-        ArrayList<Object> correctedSweets = sweets(arrayList);
-        System.out.println(correctedSweets.toString());
-        System.out.println(arrayList.toString());
-        }
-
-    public static ArrayList<Object> sweets(ArrayList<Object> sweetsList){
+    public static String sweets(ArrayList<Object> sweetsList) {
 
         ArrayList<Object> lista = new ArrayList<Object>();
 
-        for (int i = 0; i <sweetsList.size() ; i++) {
-            if (sweetsList.get(i).equals(2)){
+        for (int i = 0; i < sweetsList.size(); i++) {
+            if (sweetsList.get(i).equals(2)) {
                 sweetsList.set(i, "Croissant");
-            }else if (sweetsList.get(i).equals(false)){
+            } else if (sweetsList.get(i).equals(false)) {
                 sweetsList.set(i, "Ice Cream");
             }
             lista.add(sweetsList.get(i));
         }
-
-        return lista;
-
+        return lista.toString();
     }
-        //System.out.println(sweets(arrayList));
-        // Expected output: "Cupcake", "Croissant", "Brownie", "Ice cream"
 }
 
