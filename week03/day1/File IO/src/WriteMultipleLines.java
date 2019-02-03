@@ -13,7 +13,7 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class _05_WriteMultipleLines {
+public class WriteMultipleLines {
     public static void main(String[] args) {
 
 

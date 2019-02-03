@@ -11,7 +11,7 @@ import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.List;
 
-public class _04_WriteSingleLine {
+public class WriteSingleLine {
     public static void main(String[] args) {
         List<String> firstLine = new ArrayList();
         firstLine.add("Zoltan Marlok");

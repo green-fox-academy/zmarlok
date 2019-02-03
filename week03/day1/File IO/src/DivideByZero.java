@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.rmi.ServerError;
 import java.util.Scanner;
 
-public class _01_DivideByZero {
+public class DivideByZero {
     public static void main(String[] args) {
         System.out.println("Please enter a number: ");
         Scanner scanner = new Scanner(System.in);

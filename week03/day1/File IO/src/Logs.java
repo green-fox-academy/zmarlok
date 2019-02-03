@@ -10,7 +10,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 
-public class _07_Logs {
+public class Logs {
     public static void main(String[] args) {
 
         getVsPostRatio();

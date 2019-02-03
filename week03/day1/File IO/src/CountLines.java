@@ -10,7 +10,7 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
-public class _03_CountLines {
+public class CountLines {
     public static void main(String[] args) {
         fileNameAsString();
     }
