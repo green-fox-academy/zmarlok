@@ -5,7 +5,6 @@
 
 package mostcommoncharacter;
 
-import java.io.InputStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -26,18 +25,12 @@ public class Main{
                 Path filePath = Paths.get("./exam-trial-basics/countchar.txt");
                 ArrayList<String> contentOfFile = new ArrayList<>();
                 contentOfFile.addAll(Files.readAllLines(filePath));
-                String abc = contentOfFile.toString();
-                System.out.println(abc);
-
-                String characters = "";
-
-
 
 
                 ArrayList<Character> charsOfContent = new ArrayList<>();
 
-                for (int i = 0; i <abc.length() ; i++) {
-                    System.out.println(abc.charAt(i));
+                for (int i = 0; i <contentOfFile.size() ; i++) {
+                    contentOfFile.toString().charAt(i);
                 }
                 // System.out.println(contentOfFile.toString());
 
