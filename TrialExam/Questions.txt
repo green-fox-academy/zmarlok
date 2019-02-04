@@ -1,0 +1,11 @@
+Question time!
+How can you generate a random number?
+
+With the Math.random() function, I can generate a random number between which is greater than or equal to 0.0 and less than 1.0;
+
+If I want to generate a random integer, I have to cast it to int as following: int random = (int)(Math.random() * 10; - which means I will get a random intger which is greater than or equal to 0 and less than 10.
+
+If I want to declare the minimum limit, i should add it as following: int random = (int)(Math.random() * 10 + 2; - this will give me a random number, which is greater than or equal to 2 and less than 10.
+What is a ternary operator? How does it work?
+
+The ternary operator is a 3 way operator, which can replace an "if - then - else" statment, or a switch case by using the "?" character. It can be used like this below: result = statement ? valueIfTrue : valueIfFalse
