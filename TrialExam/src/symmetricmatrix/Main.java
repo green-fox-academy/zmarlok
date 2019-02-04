@@ -53,7 +53,7 @@ public class Main {
                 {3,4,4,5},
                 {4,5,5,4},
         };
-        
+
         System.out.println("Matrix one is symmetric. This statement is: " +isSymmetric(matrixOne));
         System.out.println("Matrix two is symmetric. This statement is: " +isSymmetric(matrixTwo));
         System.out.println("Matrix three is symmetric. This statement is: " +isSymmetric(matrixThree));
