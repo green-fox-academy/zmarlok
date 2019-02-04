@@ -20,23 +20,35 @@ package pirates;
 public class Pirate {
 
     String name = "";
+    String leg = "";
+    String title = "";
     int gold = 0;
     int hp = 10;
 
-    public Pirate(){
+
+
+    public Pirate() {
         this.name = name;
         this.gold = gold;
         this.hp = hp;
+        this.leg = leg;
+        this.title = title;
     }
 
-    public void work(){
+    public void work() {
         gold += 1;
         hp -= 1;
     }
 
-    public void party(){
+    public void party() {
         hp += 1;
-        
+    }
+
+    public String legOfPirate(String leg) {
+        if (leg == "wooden") {
+            return "- Hello, I'm Jack. I have a wooden leg and 20 golds.";
+        }
+        return "Hello, I'm Jack. I still have my real legs and 20 golds.";
     }
 }
 
