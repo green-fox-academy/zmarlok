@@ -6,8 +6,8 @@
 //
 //And the following methods:
 //
-//    introduce(): prints out "Hi, I'm name, a age year old gender."
-//    getGoal(): prints out "My goal is: Live for the moment!"
+//    introduce(): prints out "Hi, I'm name, a age year old gender." - DONE
+//    getGoal(): prints out "My goal is: Live for the moment!" - DONE
 //
 //And the following constructors:
 //
@@ -17,6 +17,21 @@
 public class Person {
 
     String name;
-    Int age;
+    int age;
     String gender;
+
+    public Person(String name, int age){
+        this.name = name;
+        this.age = age;
+        this.gender = gender;
+    }
+
+    public void introduce(String name, int age, String gender){
+        System.out.println("Hi, I'm " + name + ", a" + age + "year" + "old" + gender + ".");
+    }
+
+    public void getGoal(){
+        System.out.println("My goal is: Live for the moment!");
+    }
+
 }
