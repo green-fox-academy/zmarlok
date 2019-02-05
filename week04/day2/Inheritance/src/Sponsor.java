@@ -18,8 +18,8 @@ public class Sponsor extends Person {
     String company;
     int hiredStudents = 0;
 
-    public void introduce(String name, int age, String gender) {
-        System.out.println("Hi, I'm " + name + ", a" + age + "year old" + gender + "who represents " + company + "and hired " + hiredStudents + "students so far.");
+    public void introduce() {
+        System.out.println("Hi, I'm " + name + ", a " + age + " year old " + gender + " who represents " + company + "and hired " + hiredStudents + " students so far.");
     }
 
     public int hire(){
@@ -31,9 +31,17 @@ public class Sponsor extends Person {
     }
 
     public Sponsor (String name, int age, String gender, String company){
-        super(name, age);
+        super(name, age, gender);
         this.gender = gender;
         this.company = company;
+    }
+
+    public Sponsor(){
+        this.name = "Jane Doe";
+        this.age = 30;
+        this.gender = "female";
+        this.company = "Google";
+        this.hiredStudents = 0;
     }
 
 }
