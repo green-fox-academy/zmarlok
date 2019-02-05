@@ -1,4 +1,4 @@
-//Create a Sponsor class that has the same fields and methods as the Person class, and has the following additional
+package greenfoxorganization;//Create a Sponsor class that has the same fields and methods as the Person class, and has the following additional
 //
 //    fields:
 //        company: name of the company

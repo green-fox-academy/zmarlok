@@ -1,4 +1,4 @@
-//Create a Cohort class that has the following
+package greenfoxorganization;//Create a Cohort class that has the following
 //
 //    fields:
 //        name: the name of the cohort

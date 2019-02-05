@@ -1,4 +1,4 @@
-//Create a Person class with the following fields:
+package greenfoxorganization;//Create a Person class with the following fields:
 //
 //    name: the name of the person
 //    age: the age of the person (whole number)

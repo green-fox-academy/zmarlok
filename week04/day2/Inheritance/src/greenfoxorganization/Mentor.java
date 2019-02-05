@@ -1,4 +1,4 @@
-//Create a Mentor class that has the same fields and methods as the Person class, and has the following additional
+package greenfoxorganization;//Create a Mentor class that has the same fields and methods as the Person class, and has the following additional
 //
 //    fields:
 //        level: the level of the mentor (junior / intermediate / senior)
