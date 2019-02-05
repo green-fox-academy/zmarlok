@@ -9,6 +9,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Main{
 
@@ -21,13 +22,13 @@ public class Main{
     }
     public static void mostCommonChar() {
 
+        ArrayList<String> contentOfFile = new ArrayList<>();
+
             try {
                 Path filePath = Paths.get("./exam-trial-basics/countchar.txt");
-                ArrayList<String> contentOfFile = new ArrayList<>();
                 contentOfFile.addAll(Files.readAllLines(filePath));
 
-
-                ArrayList<Character> charsOfContent = new ArrayList<>();
+                ArrayList<Charcounter> charsOfContent = new ArrayList<>();
 
                 for (int i = 0; i <contentOfFile.size() ; i++) {
                     contentOfFile.toString().charAt(i);

@@ -19,20 +19,28 @@ package pirates;
 
 public class Pirate {
 
-    String name = "";
-    String leg = "";
-    String title = "";
-    int gold = 0;
-    int hp = 10;
+    String name;
+    boolean hasLeg;
+    boolean isCaptian;
+    int gold;
+    int hp;
 
 
 
-    public Pirate() {
+    public Pirate(String name, boolean isCaptian, boolean hasLeg, int gold) {
         this.name = name;
+        this.hasLeg = hasLeg;
+        this.isCaptian = isCaptian;
+        this.gold = gold;
+        this.hp = 10;
+    }
+
+    public Pirate(String name, boolean isCaptian, boolean hasLeg, int gold, int hp) {
+        this.name = name;
+        this.hasLeg = hasLeg;
+        this.isCaptian = isCaptian;
         this.gold = gold;
         this.hp = hp;
-        this.leg = leg;
-        this.title = title;
     }
 
     public void work() {
@@ -51,4 +59,3 @@ public class Pirate {
         return "Hello, I'm Jack. I still have my real legs and 20 golds.";
     }
 }
-
