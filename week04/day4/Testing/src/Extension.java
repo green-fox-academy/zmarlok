@@ -6,7 +6,8 @@ import java.util.List;
  */
 public class Extension {
     int add(int a, int b) {
-        return 5;
+        int sum = a + b;
+        return sum;
     }
 
     int maxOfThree(int a, int b, int c) {
