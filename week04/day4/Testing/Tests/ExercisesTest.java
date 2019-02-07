@@ -5,6 +5,7 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 import static org.junit.Assert.assertEquals;
 
@@ -53,18 +54,30 @@ public class ExercisesTest {
         multipleElementarray.add(elementFour);
 
         Sum multipleElementTest = new Sum();
-        multipleElementTest.sumOf(multipleElementarray);
         int sum = multipleElementTest.sumOf(multipleElementarray);
         assertEquals((Integer)7, (Integer)sum);
     }
 
-    @Test
+    @Test (expected = NullPointerException.class)
     public void sumOfNumbers_nullTest(){
-        ArrayList<Integer>nullArray = new ArrayList<Integer>();
-        nullArray.equals(0);
 
         Sum nullTest = new Sum();
-        int sum = nullTest.sumOf(nullArray);
-        // TEST CASE MISSING!
+        int sum = nullTest.sumOf(null);
+    }
+
+    @Test
+    public void isAnagram_RandomTest() {
+        Anagram testAnagram = new Anagram();
+        String word1 = "alma";
+        String word2 = "lmaa";
+        char[] word1Chars = word1.replaceAll("[\\s]", "").toCharArray();
+        char[] word2Chars = word2.replaceAll("[\\s]", "").toCharArray();
+        Arrays.sort(word1Chars);
+        Arrays.sort(word2Chars);
+        System.out.println(word1Chars);
+        System.out.println(word2Chars);
+
+        System.out.println(testAnagram.isAnagram(word1,word2));
+        assertEquals(true, testAnagram.isAnagram(word1,word2));
     }
 }
