@@ -19,7 +19,7 @@ import java.util.ArrayList;
 public class Sum {
 
     public int sumOf(ArrayList<Integer> inputList){
-        if (inputList.equals(0)) {
+        if (inputList.equals(null)) {
             throw new NullPointerException();
         }
         int sum = 0;
