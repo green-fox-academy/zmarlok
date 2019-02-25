@@ -37,6 +37,6 @@ public class WriteMultipleLines {
             Files.write(path, newLine);
 
         } catch (Exception ex) {
-                    }
+        }
     }
 }
