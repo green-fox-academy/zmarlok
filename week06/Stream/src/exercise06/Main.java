@@ -9,12 +9,13 @@ public class Main {
         //Write a Stream Expression to find the uppercase characters in a string!
 
         String testString = "MaNyUppErCaSeLetteRS";
-        ArrayList<Character> charactersList = new ArrayList<Character>();
+
+        ArrayList<Character> characterList = new ArrayList<Character>();
         for (char c : testString.toCharArray()) {
-            charactersList.add(c);
+            characterList.add(c);
         }
 
-        charactersList.stream()
+        characterList.stream()
                 .filter(Character::isUpperCase)
                 .forEach(System.out::print);
     }
