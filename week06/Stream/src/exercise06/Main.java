@@ -2,6 +2,7 @@ package exercise06;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 public class Main {
@@ -10,13 +11,9 @@ public class Main {
 
         String testString = "MaNyUppErCaSeLetteRS";
 
-        ArrayList<Character> characterList = new ArrayList<Character>();
-        for (char c : testString.toCharArray()) {
-            characterList.add(c);
-        }
-
-        characterList.stream()
+        testString.chars()
                 .filter(Character::isUpperCase)
+                .mapToObj(character -> (char)character)
                 .forEach(System.out::print);
     }
 }
