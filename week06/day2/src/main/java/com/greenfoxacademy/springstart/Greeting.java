@@ -31,5 +31,4 @@ public class Greeting {
         this.content = "Hello " + content + "!";
     }
 
-
 }
