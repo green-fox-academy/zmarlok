@@ -1,0 +1,52 @@
+body{
+    background: lightskyblue
+}
+
+table{
+    width: 600px;
+    margin-right: auto;
+    margin-left: auto;
+    border-collapse: collapse;
+}
+
+th{
+    background: black;
+    color: lightgrey;
+    text-align: left;
+    font-size: 24px;
+    padding: 15px;
+}
+
+thead{
+    border-bottom: 4px solid grey;
+}
+th, td {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    border: 1px solid gray;
+}
+
+tbody{
+    border: transparent;
+    background: lightblue;
+}
+
+td{
+    font-size: 20px;
+    padding: 15px;
+}
+
+tr:nth-child(2n){
+    background-color: white;
+}
+
+th:first-child{
+    border:none;
+    border-top-left-radius: 10px;
+}
+th:last-of-type{
+    border-top-right-radius: 10px;
+    border-top: none;
+    border-right: none;
+}
+    
