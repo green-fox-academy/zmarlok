@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Random;
 import java.util.stream.Collectors;
@@ -44,7 +45,7 @@ public class WebShopController {
     @RequestMapping("/cheapest-first")
     public String getCheapestFirst(Model model){
         List<ShopItem> cheapestFirstList = shopItemList.stream()
-                .sorted()
+                .sorted(Comparator.comparing(ShopItem::getPrice))
                 .collect(Collectors.toList());
         model.addAttribute("shopItems", cheapestFirstList);
         return "webshop";
