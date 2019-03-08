@@ -23,14 +23,8 @@ public class WebShopController {
         shopItemList.add(new ShopItem("Pear", "delicious fruit, price/kg", 250.0, 123));
         shopItemList.add(new ShopItem("Carrot", "vegetable, price/kg", 180.0, 7));
         shopItemList.add(new ShopItem("Broccoli", "vegetable, price/piece", 300.0, 4));
-        shopItemList.add(new ShopItem("Human kidney", "human organ", 2000000.0, 2));
+        shopItemList.add(new ShopItem("Human kidney", "human organ", 2000000.0, 0));
     }
-
-   /* public WebShopController() {
-        List<ShopItem> list = new ArrayList<>();
-        itemList = new ShopItemList(list);
-        initializeList();
-    } */
 
     @RequestMapping("/webshop")
     public String getWebshop(Model model) {
@@ -44,6 +38,15 @@ public class WebShopController {
                 .filter(i -> i.getQuantity() > 0)
                 .collect(Collectors.toList());
         model.addAttribute("shopItems", availableOnly);
+        return "webshop";
+    }
+
+    @RequestMapping("/cheapest-first")
+    public String getCheapestFirst(Model model){
+        List<ShopItem> cheapestFirstList = shopItemList.stream()
+                .sorted()
+                .collect(Collectors.toList());
+        model.addAttribute("shopItems", cheapestFirstList);
         return "webshop";
     }
 
