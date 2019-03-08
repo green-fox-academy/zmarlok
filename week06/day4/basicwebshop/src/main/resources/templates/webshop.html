@@ -36,7 +36,7 @@
         <th id = "quantityOfStock">Quantity of stock</th>
     </thead>
     <tbody>
-        <tr th:each="item : ${items}">
+        <tr th:each="item : ${shopItems}">
             <td th:text="${item.getName()}"></td>
             <td th:text="${item.getDescription()}"></td>
             <td th:text="${item.getPrice()}"></td>

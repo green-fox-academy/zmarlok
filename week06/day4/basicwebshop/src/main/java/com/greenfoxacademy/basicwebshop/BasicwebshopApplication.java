@@ -14,9 +14,4 @@ public class BasicwebshopApplication {
         SpringApplication.run(BasicwebshopApplication.class, args);
     }
 
-    @RequestMapping("/webshop")
-    @ResponseBody
-    public String hello (){
-        return "Hello WEBSHOP";
-    }
 }
