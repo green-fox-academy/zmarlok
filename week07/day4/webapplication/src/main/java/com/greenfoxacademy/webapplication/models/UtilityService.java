@@ -3,6 +3,7 @@ package com.greenfoxacademy.webapplication.models;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 @Service
@@ -22,5 +23,9 @@ public class UtilityService {
 
     public String randomColor() {
         return colors.get(random.nextInt(colors.size()));
+    }
+
+    public List<String> getColorList(){
+        return this.colors;
     }
 }

@@ -19,7 +19,7 @@ public class WebapplicationApplication implements CommandLineRunner {
         this.color = color;
     }
 
-   /* EXERCICE ONE - Without myColor interface
+   /* EXERCISE ONE - Without myColor interface
     @Autowired
     WebapplicationApplication(Printer printer){
 	    this.printer = printer;
@@ -29,7 +29,7 @@ public class WebapplicationApplication implements CommandLineRunner {
         SpringApplication.run(WebapplicationApplication.class, args);
     }
 
-    /* EXERCICE ONE - Without myColor interface
+    /* EXERCISE ONE - Without myColor interface
     @Override
     public void run(String... args) throws Exception {
         printer.log("JO NAPOT!");
