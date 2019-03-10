@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Inhabitant detail</title>
+</head>
+<body>
+
+<span th:if="${error}" th:text="${error}"></span>
+<div th:unless="${error}" th:object="${inhabitant_by_id}">
+    <h1 th:text="*{id}"></h1>
+    <h2 th:text="*{name}"></h2>
+    <h3 th:text="*{age}"></h3>
+    <h4 th:text="*{gender}"></h4>
+</div>
+
+</body>
+</html>
