@@ -1,4 +1,4 @@
-package com.greenfoxacademy.listingtodos.model;
+package com.greenfoxacademy.listingtodos.models;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -48,3 +48,4 @@ public class Todo {
         this.done = done;
     }
 }
+
