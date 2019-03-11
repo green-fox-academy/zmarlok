@@ -25,5 +25,6 @@ public class ConnectionwithmysqlApplication implements CommandLineRunner {
         todoRepository.save(new Todo("I have to learn Object Relational Mapping"));
         todoRepository.save(new Todo("I have to understand everything"));
         todoRepository.save(new Todo("I have to learn CommandLineRunner"));
+        todoRepository.save(new Todo("Eat lunch")).setDone(true);
     }
 }
