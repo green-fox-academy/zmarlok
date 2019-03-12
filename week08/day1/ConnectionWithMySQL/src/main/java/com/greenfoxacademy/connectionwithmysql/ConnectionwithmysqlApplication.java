@@ -22,9 +22,10 @@ public class ConnectionwithmysqlApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
+        todoRepository.deleteAll();
         todoRepository.save(new Todo("I have to learn Object Relational Mapping", false, false));
-        todoRepository.save(new Todo("I have to understand everything", true, false));
-        todoRepository.save(new Todo("I have to learn CommandLineRunner", false, true));
+        todoRepository.save(new Todo("I have to understand everything what we learned so far", true, false));
+        todoRepository.save(new Todo("I have to learn how to use CommandLineRunner", false, true));
         todoRepository.save(new Todo("Eat lunch", true, true));
     }
 }

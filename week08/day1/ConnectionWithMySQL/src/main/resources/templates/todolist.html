@@ -6,6 +6,7 @@
 </head>
 <body>
 <h1>Todos for today:</h1>
+<a th:href="@{/todo/add}">Add new ToDo</a>
 
 <table>
     <tr>
@@ -19,6 +20,8 @@
         <td th:text="${todo.title}"></td>
         <td th:text="${todo.done}"></td>
         <td th:text="${todo.urgent}"></td>
+        <td><a th:href="@{'/todo/'+${todo.id}+'/delete'}" th:method="get">DELETE</a></td>
+        <td><a th:href="@{'/todo/'+${todo.id}+'/update'}">EDIT</a></td>
     </tr>
 
 </table>
