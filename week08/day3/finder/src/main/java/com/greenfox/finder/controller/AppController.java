@@ -27,8 +27,8 @@ public class AppController {
     }
 
     @PostMapping("/app")
-    public String create() {
-        service.save(new User());
+    public String create(User user) {
+        service.save(user);
         return "redirect:/app";
     }
 }
