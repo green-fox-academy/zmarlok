@@ -6,10 +6,56 @@
     <meta charset="utf-8" />
 </head>
 <body>
-<div>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Balance</th>
+                <th>Animal type</th>
+                <th>Index</th>
+                <th>Is King</th>
+                <th>Is Good Guy or Bad Guy?</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="bankAccount : ${allAccount}">
+                    <td th:text="${bankAccount.name}"></td>
+                    <td th:text="|${#numbers.formatDecimal(bankAccount.balance, 0, 2, 'POINT')} Zebra|"></td>
+                    <td th:text="${bankAccount.animalType}"></td>
+                    <td th:text="${bankAccountStat.index}"></td>
+                    <td>
+                        <span th:if="${bankAccount.isKing()}">King</span>
+                    </td>
+                    <td th:text="${bankAccount.isGoodGuy()} ? GoodGuy : BadGuy"></td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+        <form action="#" th:action="@{/raise_balance}" th:method="post">
+            <label for="raise"> Raise animal balance by index: </label>
+            <input id="raise" type="number" name="animalIndex">
+            <button>Raise</button>
+        </form>
+    <br>
+        <form action="#" th:action="@{/add}" th:object="${newBankAccount}" th:method="post">
+            <label>Add new account:</label>
+            <input type="text" name="name" th:field="*{name}" required>
+
+            <label for="Balance">Balance</label>
+            <input id="Balance" type="number" name="balance" th:field="*{balance}" required>
+            <input type="text" name="animal type" th:field="*{animalType}" required>
+
+            <label for="isKing" th:text="King"></label>
+            <input id =isKing type="checkbox" th:field="*{king}"/>
+
+            <label for="isGoodOrBad" th:text="GoodGuy"></label>
+            <input id =isGoodOrBad type="checkbox" th:field="*{goodGuy}"/>
+
+            <input type="submit" value="Add new account">
+
+        </form>
 
 
-</div>
 
 </body>
 </html>
