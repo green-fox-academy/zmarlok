@@ -23,7 +23,7 @@ public class BankAccountController {
     @RequestMapping(value = "/html_text", method = RequestMethod.GET)
     public String showHTMLText(Model model){
         model.addAttribute("someString", "This is an <em>HTML</em> text. <b>Enjoy yourself!</b>");
-        return "test";
+        return "test_string";
     }
 
 
