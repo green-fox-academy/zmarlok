@@ -2,15 +2,16 @@ package com.greenfoxacademy.bankofsimba.models;
 
 public class BankAccount {
 
-    String name;
-    float balance;
-    String animalType;
+    private String name;
+    private int balance;
+    private String animalType;
+
 
     public String getName() {
         return name;
     }
 
-    public double getBalance() {
+    public int getBalance() {
         return balance;
     }
 
@@ -18,7 +19,7 @@ public class BankAccount {
         return animalType;
     }
 
-    public BankAccount(String name, float balance, String animalType) {
+    public BankAccount(String name, int balance, String animalType) {
         this.name = name;
         this.balance = balance;
         this.animalType = animalType;

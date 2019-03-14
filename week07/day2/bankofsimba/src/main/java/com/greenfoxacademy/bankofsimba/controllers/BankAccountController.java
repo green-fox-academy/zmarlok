@@ -4,6 +4,7 @@ import com.greenfoxacademy.bankofsimba.models.BankAccount;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,17 +14,19 @@ public class BankAccountController {
 
     BankAccount simbaAccount = new BankAccount("Simba", 2000, "lion");
 
-    @RequestMapping("/show")
+    @RequestMapping(value = "/show", method = RequestMethod.GET)
     public String showAccount(Model model) {
         model.addAttribute("account", simbaAccount);
-
-        return "show";
+        return "bank_account";
     }
 
-    @RequestMapping("/test")
-    public String showTest (Model model){
+    @RequestMapping(value = "/html_text", method = RequestMethod.GET)
+    public String showHTMLText(Model model){
+        model.addAttribute("someString", "This is an <em>HTML</em> text. <b>Enjoy yourself!</b>");
         return "test";
     }
+
+
 
 
     List<BankAccount> allAccount = new ArrayList<BankAccount>();
