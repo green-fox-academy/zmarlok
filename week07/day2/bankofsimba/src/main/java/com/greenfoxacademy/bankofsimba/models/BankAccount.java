@@ -32,7 +32,7 @@ public class BankAccount {
         return balance;
     }
 
-    public void setBalance(){
+    public void setBalance(int balance){
         this.balance = balance;
     }
 

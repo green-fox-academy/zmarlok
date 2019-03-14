@@ -39,11 +39,14 @@
     <br>
         <form action="#" th:action="@{/add}" th:object="${newBankAccount}" th:method="post">
             <label>Add new account:</label>
-            <input type="text" name="name" th:field="*{name}" required>
+            <label for="name">Name</label>
+            <input id="name" type="text" name="name" th:field="*{name}" required>
 
-            <label for="Balance">Balance</label>
-            <input id="Balance" type="number" name="balance" th:field="*{balance}" required>
-            <input type="text" name="animal type" th:field="*{animalType}" required>
+            <label for="balance">Balance:</label>
+            <input id="balance" type="text" name="balance" th:field="*{balance}" required>
+
+            <label for="type">Animal Type:</label>
+            <input id="type" type="text" name="animal type" th:field="*{animalType}" required>
 
             <label for="isKing" th:text="King"></label>
             <input id =isKing type="checkbox" th:field="*{king}"/>
