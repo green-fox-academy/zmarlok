@@ -43,8 +43,8 @@ public class BankAccountController {
     }
 
     @PostMapping("/raise_balance")
-    public String raiseSelectedAccountsBalance(@RequestParam(value = "animalIndex") int index) {
-        allAccount.get(index).raiseBalance();
+    public String raiseSelectedAccountsBalance(@RequestParam int animalIndex) {
+        allAccount.get(animalIndex).raiseBalance();
         return "redirect:/all";
     }
 
