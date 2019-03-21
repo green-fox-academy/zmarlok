@@ -1,11 +1,13 @@
 package com.greenfoxacademy.frontend.controller;
 
+import com.greenfoxacademy.frontend.model.Append;
 import com.greenfoxacademy.frontend.model.Doubling;
 import com.greenfoxacademy.frontend.model.ErrorMessage;
 import com.greenfoxacademy.frontend.model.Greeting;
 import com.greenfoxacademy.frontend.service.AppService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -28,7 +30,7 @@ public class MainRestController {
     public Object greet(@RequestParam(name = "name", required = false)String nameInput,
                         @RequestParam(name = "title", required = false)String titleInput){
         if ((nameInput != null && nameInput.length()>0) && (titleInput != null && titleInput.length()>0)){
-            return new Greeting("Hello " + nameInput + " my dear " + titleInput);
+            return new Greeting("Oh, hi there " + nameInput + ", my dear " + titleInput + "!");
         } else if ((nameInput == null || nameInput.length() == 0) && (titleInput == null || titleInput.length() == 0)) {
             return new ErrorMessage("Please provide a name and a title!");
         } else if (titleInput == null || titleInput.length() == 0) {
@@ -36,6 +38,10 @@ public class MainRestController {
         } else  {
             return new ErrorMessage("Please provide a name!");
         }
+    }
 
+    @GetMapping(value = "/appenda/{appendable}")
+    public Object appendA(@PathVariable(value = "appendable") String appendable){
+        return new Append(appendable);
     }
 }
