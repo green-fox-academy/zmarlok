@@ -20,13 +20,16 @@
         <a href="/avg-stock" class="navButtons">avg stock</a>
         <a href="/most-expensive-available" class="navButtons">most expensive available</a>
     </nav>
+
 </header>
-    <div id ="search">  
-        <label for="searchBar">
-        Search for:
-        </label>
-        <input type="search" placeholder="...something like nike" id="searchBar">
-        <input type="submit" value="Search">
+    <div id ="search">
+        <form action="/search" method="post">
+            <label for="searchBar">
+            Search for:
+            </label>
+            <input type="search" name="keyword" placeholder="...something like nike" id="searchBar">
+            <input type="submit" value="Search">
+        </form>
     </div>
 <table>
     <thead class="thead">
@@ -43,8 +46,7 @@
             <td th:text="${item.getQuantity()}"></td>
         </tr>
     </tbody>
-</table>    
-
+</table>
     </div>
 </body>
 </html>

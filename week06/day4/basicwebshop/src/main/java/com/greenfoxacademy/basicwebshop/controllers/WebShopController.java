@@ -4,6 +4,7 @@ import com.greenfoxacademy.basicwebshop.model.ShopItem;
 import com.greenfoxacademy.basicwebshop.model.ShopItemList;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -68,6 +69,28 @@ public class WebShopController {
                 .max(Comparator.comparing(ShopItem::getPrice))
                 .get();
         model.addAttribute("shopItems", mostExpensive);
+        return "webshop";
+    }
+
+    @RequestMapping("/avg-stock")
+    public String getAverageStock(Model model){
+        double averageOfStock = shopItemList.stream()
+                .filter(i -> i.getQuantity() > 0)
+                .mapToInt(ShopItem::getQuantity)
+                .summaryStatistics().getAverage();
+        model.addAttribute("singleItem", averageOfStock);
+        return "single_item";
+    }
+
+    @PostMapping("/search")
+    public String search(Model model, @RequestParam("keyword") String keyword) {
+
+        List<ShopItem> matchingItemsList = shopItemList.stream()
+                .filter(i -> i.getName().toLowerCase().contains(keyword.toLowerCase()) ||
+                        i.getDescription().toLowerCase().contains(keyword.toLowerCase()))
+                .collect(Collectors.toList());
+        model.addAttribute("shopItems", matchingItemsList);
+
         return "webshop";
     }
 

@@ -14,8 +14,6 @@ public class ShopItem {
         this.quantity = quantity;
     }
 
-    public ShopItem(){}
-
     public String getName() {
         return name;
     }
