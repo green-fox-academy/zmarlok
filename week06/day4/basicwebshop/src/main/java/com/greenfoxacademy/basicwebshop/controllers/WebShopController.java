@@ -25,6 +25,7 @@ public class WebShopController {
         shopItemList.add(new ShopItem("Carrot", "vegetable, price/kg", 180.0, 7));
         shopItemList.add(new ShopItem("Broccoli", "vegetable, price/piece", 300.0, 4));
         shopItemList.add(new ShopItem("Human kidney", "human organ", 2000000.0, 0));
+        shopItemList.add(new ShopItem("Nike shoes", "nike", 2000000.0, 0));
     }
 
     @RequestMapping("/webshop")
@@ -50,6 +51,27 @@ public class WebShopController {
         model.addAttribute("shopItems", cheapestFirstList);
         return "webshop";
     }
+
+    @RequestMapping("/contains-nike")
+    public String getItemContainingNike(Model model){
+        List<ShopItem> itemContainingNike = shopItemList.stream()
+                .filter(i -> i.getName().toLowerCase().contains("nike") || i.getDescription().toLowerCase().contains("nike"))
+                .collect(Collectors.toList());
+        model.addAttribute("shopItems", itemContainingNike);
+        return "webshop";
+    }
+
+    @RequestMapping("/most-expensive-available")
+    public String getMostExpensive(Model model){
+        ShopItem mostExpensive = shopItemList.stream()
+                .filter(i -> i.getQuantity() > 0)
+                .max(Comparator.comparing(ShopItem::getPrice))
+                .get();
+        model.addAttribute("shopItems", mostExpensive);
+        return "webshop";
+    }
+
+
 
 
 
